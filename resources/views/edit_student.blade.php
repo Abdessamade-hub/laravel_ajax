@@ -1,0 +1,43 @@
+
+    <div class="card mb-3">
+        
+        <div class="card-body">
+          <h5 class="card-title">Update informations student</h5>
+
+                <form action=" {{ url('/update/'.$student->id) }} " method="POST">
+                    @csrf
+                    <div class="form-group">
+                    <label>Cne</label>
+                    <input type="text" class="form-control" name="cne" placeholder="Enter the cne" value="{{ $student->cne }}">
+                    </div>
+
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" class="form-control" name="firstName" placeholder="Enter the First Name" value="{{ $student->firstName }}">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Second Name</label>
+                        <input type="text" class="form-control" name="secondName" placeholder="Enter the Second Name" value="{{ $student->secondName }}">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input type="text" class="form-control" name="age" placeholder="Enter the Age" value="{{ $student->age }}">
+                    </div>
+                    <div class="form-group">
+                        <label>Speciality</label>
+                        <input type="text" class="form-control" name="speciality" placeholder="Enter the Speciality" value="{{ $student->speciality }}">
+                    </div>
+
+                    <div class="form-group mt-4 ">
+                        <input type="text" class="btn btn-warning"  value="RESET">
+                        <input type="submit" class=" btn btn-success"  value="SAVE">        
+                    </div>
+                    
+                </form>
+        </div>
+    </div>
+
+
+
